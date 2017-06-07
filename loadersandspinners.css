@@ -1,0 +1,212 @@
+
+.rect-spinner{
+	text-align: center;
+	width: 70px;
+	height: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 70px;
+	margin: auto;
+}
+
+.col-sm-4{
+	padding: 100px;
+	height: 100px;
+	}
+
+#rect1,#rect2,#rect3,#rect4,#rect5{
+	
+	height: 30px;
+	width: 6px;
+	background: black;
+	float: left;
+animation-name:up;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+	margin: 2px;
+}
+
+#rect1{
+	animation-delay: 0s;
+}
+#rect2{
+	animation-delay: .2s;
+}
+
+#rect3{
+	animation-delay: .40s;
+}
+#rect4{
+	animation-delay: .60s;
+}
+#rect5{
+	animation-delay: .80s;
+}
+
+@keyframes up{
+	0%{
+		transform: scaleY(1);
+	}
+	30%{
+		
+		transform: scaleY(2);
+	}
+	60%{transform: scaleY(1);
+	}
+}
+
+
+
+#circ1,#circ2{
+	width: 70px;
+	height: 70px;
+	background: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 100px;
+	animation-name: circ-anim;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+
+#circ2{animation-delay: 1s;}
+
+@keyframes circ-anim{
+	
+	0%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	50%{
+		opacity: 0;
+		transform: scale(0);
+	}
+	
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.simple-rect{
+	width: 70px;
+	height: 70px;
+	background: black;
+animation-name: simplerect;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+
+@keyframes simplerect{
+	0%{
+		transform:rotate(0);
+	}
+	50%{
+		transform: perspective(120px) rotateX(180deg) rotateY(180deg);
+	}
+	100%{
+		transform: perspective(120px) rotateX(180deg);
+	}
+}
+
+
+#c1,#c2,#c3{
+	height: 30px;
+	width: 30px;
+	background: black;
+display: inline-block;
+	border-radius: 50px;
+	animation-name: dip;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	}
+
+#c2{
+	animation-delay: .15s;
+}
+
+#c3{animation-delay: 0.25s;}
+
+@keyframes dip{
+	0%{
+		opacity: 0;
+		transform: scale(0);
+	}
+	50%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	100%{
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+
+
+#ellipse{
+	width: 70px;
+	height: 70px;
+	border: 5px solid black;
+	border-bottom: none;
+	border-radius: 100px;
+animation-name: rot;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rot{
+	0%{
+		transform: rotate(0deg);
+	}
+	
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+#cc1,#cc2{
+	border: 5px solid black;
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 80px;
+	
+  }
+
+#cc1{
+	animation-name: lefttoright;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+#cc2{
+	animation-name: bottomtotop;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 0.5s;
+	
+}
+
+@keyframes lefttoright{
+	0%{
+		transform: perspective(120px) rotateY(0deg);
+	}
+	100%{
+		transform: perspective(120px) rotateY(360deg);
+	}
+}
+@keyframes bottomtotop{
+	0%{
+		transform: perspective(120px) rotateX(0deg);
+	}
+	100%{
+		transform: perspective(120px) rotateX(360deg);
+	}
+}
